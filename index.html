@@ -3,15 +3,6 @@
 <meta name="description" content="homework html-css" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="stylesheet" href="./css/normalize.css" />
-<link
-  href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
-  rel="stylesheet"
-/>
-<link
-  href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap"
-  rel="stylesheet"
-/>
-<link rel="stylesheet" href="https://use.typekit.net/kmq1ftz.css" />
 <link rel="stylesheet" href="./css/style.css" />
 <title>HW-07</title>
 
@@ -77,9 +68,25 @@
       <div class="conteiner">
         <h2 class="contact-title">contact us</h2>
         <p class="contact-text">Proin iaculis purus consequat sem cure.</p>
-        <div class="button">
+        <form action="#" class="contact-form">
+          <div class="contact-list">
+            <input class="contact-list-form" type="text" />
+            <input class="contact-list-form" type="email" />
+            <input class="contact-list-form" type="text" />
+          </div>
+          <div class="contact-textarea">
+            <textarea
+              class="contact-textarea-form"
+              name="user message"
+            ></textarea>
+          </div>
+          <div class="button">
+            <button type="button" class="contact-button">send message</button>
+          </div>
+        </form>
+        <!-- <div class="button">
           <button type="button" class="contact-button">send message</button>
-        </div>
+        </div> -->
       </div>
     </section>
   </main>
