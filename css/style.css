@@ -230,6 +230,7 @@ body {
   letter-spacing: -0.35px;
   padding-left: 20px;
   border-radius: 5px;
+  border: hidden;
 }
 
 .contact-list-item-input::placeholder,
@@ -240,12 +241,12 @@ body {
 
 .contact-list-item-input:required:focus:valid:not(:placeholder-shown),
 .contact-textarea:required:focus:valid:not(:placeholder-shown) {
-  border-color: rgb(0, 128, 0);
+  border: 2px solid rgb(0, 128, 0);
 }
 
 .contact-list-item-input:required:focus:invalid:not(:placeholder-shown),
 .contact-textarea:required:focus:invalid:not(:placeholder-shown) {
-  border-color: rgb(255, 0, 0);
+  border: 2px solid rgb(255, 0, 0);
 }
 
 .contact-list-item-input:required:focus,
