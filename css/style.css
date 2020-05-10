@@ -5,58 +5,49 @@
   --fourth-font: "Qwigley", "Arial", sans-serif;
 }
 
-/* montserrat-regular - latin */
 @font-face {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   src: local("Montserrat Regular"), local("Montserrat-Regular"),
     url("../fonts/montserrat-v14-latin-regular.woff2") format("woff2"),
-    /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url("../fonts/montserrat-v14-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    url("../fonts/montserrat-v14-latin-regular.woff") format("woff");
 }
-/* montserrat-700 - latin */
+
 @font-face {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
   src: local("Montserrat Bold"), local("Montserrat-Bold"),
     url("../fonts/montserrat-v14-latin-700.woff2") format("woff2"),
-    /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url("../fonts/montserrat-v14-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    url("../fonts/montserrat-v14-latin-700.woff") format("woff");
 }
 
-/* roboto-slab-regular - latin */
 @font-face {
   font-family: "Roboto Slab";
   font-style: normal;
   font-weight: 400;
   src: local(""),
     url("../fonts/roboto-slab-v11-latin-regular.woff2") format("woff2"),
-    /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url("../fonts/roboto-slab-v11-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    url("../fonts/roboto-slab-v11-latin-regular.woff") format("woff");
 }
 
-/* noto-serif-italic - latin */
 @font-face {
   font-family: "Noto Serif";
   font-style: italic;
   font-weight: 400;
   src: local("Noto Serif Italic"), local("NotoSerif-Italic"),
     url("../fonts/noto-serif-v8-latin-italic.woff2") format("woff2"),
-    /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url("../fonts/noto-serif-v8-latin-italic.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    url("../fonts/noto-serif-v8-latin-italic.woff") format("woff");
 }
 
-/* qwigley-regular - latin */
 @font-face {
   font-family: "Qwigley";
   font-style: normal;
   font-weight: 400;
   src: local("Qwigley"), local("Qwigley-Regular"),
     url("../fonts/qwigley-v9-latin-regular.woff2") format("woff2"),
-    /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url("../fonts/qwigley-v9-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    url("../fonts/qwigley-v9-latin-regular.woff") format("woff");
 }
 
 body {
@@ -98,7 +89,7 @@ body {
 }
 
 .nav-list-item-link {
-  color: #222222;
+  color: rgb(34, 34, 34);
   font-family: var(--main-font);
   font-size: 14px;
   font-weight: 700;
@@ -114,9 +105,10 @@ body {
 .services {
   padding-bottom: 118px;
 }
+
 .services-title,
 .contact-title {
-  color: #222222;
+  color: rgb(34, 34, 34);
   font-family: Montserrat;
   font-size: 40px;
   font-weight: 700;
@@ -125,9 +117,10 @@ body {
   text-align: center;
   margin-bottom: 16px;
 }
+
 .services-text,
 .contact-text {
-  color: #777777;
+  color: rgb(119, 119, 119);
   font-family: var(--third-font);
   font-size: 16px;
   text-align: center;
@@ -152,38 +145,13 @@ body {
   margin-bottom: 12px;
 }
 
-.services-list-item-title-basket::before {
-  content: "";
-  display: block;
-  width: 74px;
-  height: 74px;
-  background-image: url(../images/icon-basket.png);
-  background-repeat: no-repeat;
-  border: 3px solid rgb(254, 209, 54);
-  border-radius: 50%;
-  margin: 0 auto 24px;
-  background-position: center;
-}
-
-.services-list-item-title-laptop::before {
-  content: "";
-  display: block;
-  width: 74px;
-  height: 74px;
-  background-image: url(../images/icon-laptop.png);
-  background-repeat: no-repeat;
-  border: 3px solid rgb(254, 209, 54);
-  border-radius: 50%;
-  margin: 0 auto 24px;
-  background-position: center;
-}
-
+.services-list-item-title-basket::before,
+.services-list-item-title-laptop::before,
 .services-list-item-title-lock::before {
   content: "";
   display: block;
   width: 74px;
   height: 74px;
-  background-image: url(../images/icon-locked.png);
   background-repeat: no-repeat;
   border: 3px solid rgb(254, 209, 54);
   border-radius: 50%;
@@ -191,8 +159,23 @@ body {
   background-position: center;
 }
 
+.services-list-item-title-basket::before {
+  content: "";
+  background-image: url(../images/icon-basket.png);
+}
+
+.services-list-item-title-laptop::before {
+  content: "";
+  background-image: url(../images/icon-laptop.png);
+}
+
+.services-list-item-title-lock::before {
+  content: "";
+  background-image: url(../images/icon-locked.png);
+}
+
 .services-list-item-discribe {
-  color: #777777;
+  color: rgb(119, 119, 119);
   font-family: var(--second-font);
   font-size: 14px;
   font-weight: 400;
@@ -224,46 +207,69 @@ body {
 
 .contact-form {
   display: flex;
-  height: 305px;
-}
-
-.contact-list {
-  display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
-  width: 940px;
+  justify-content: center;
 }
 
-.contact-list-form {
+.contact-list-item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.contact-list-item-input {
   width: 455px;
   height: 50px;
   margin-right: 30px;
 }
 
-.contact-list-form:not(:last-child) {
-  margin-bottom: 30px;
+.contact-list-item-input,
+.contact-textarea {
+  color: rgb(187, 187, 187);
+  font-family: var(--main-font);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -0.35px;
+  padding-left: 20px;
+  border-radius: 5px;
 }
 
-.contact-textarea-form {
+.contact-list-item-input::placeholder,
+.contact-textarea::placeholder {
+  text-transform: uppercase;
+  color: rgb(187, 187, 187);
+}
+
+.contact-list-item-input:required:focus:valid:not(:placeholder-shown),
+.contact-textarea:required:focus:valid:not(:placeholder-shown) {
+  border-color: rgb(0, 128, 0);
+}
+
+.contact-list-item-input:required:focus:invalid:not(:placeholder-shown),
+.contact-textarea:required:focus:invalid:not(:placeholder-shown) {
+  border-color: rgb(255, 0, 0);
+}
+
+.contact-list-item-input:required:focus,
+.contact-textarea:focus {
+  outline: none;
+}
+
+.contact-textarea {
   width: 455px;
-  height: 210px;
+  padding-top: 20px;
+  resize: none;
 }
 
-.button {
-  width: 240px;
-  margin: 0 auto;
-  align-self: flex-end;
-  align-self: inherit;
-}
 .contact-button {
   width: 240px;
   height: 66px;
   background-color: rgb(254, 209, 54);
-  color: #ffffff;
+  color: rgb(255, 255, 255);
   font-family: var(--main-font);
   font-size: 18px;
   font-weight: 700;
   text-transform: uppercase;
   cursor: pointer;
   border: none;
+  margin-top: 30px;
+  border-radius: 5px;
 }
