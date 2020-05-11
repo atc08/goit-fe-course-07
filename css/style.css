@@ -50,11 +50,6 @@
     url("../fonts/qwigley-v9-latin-regular.woff") format("woff");
 }
 
-body {
-  width: 1600px;
-  margin: 0 auto;
-}
-
 .conteiner {
   width: 940px;
   margin: 0 auto;
